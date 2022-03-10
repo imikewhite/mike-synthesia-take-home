@@ -36,7 +36,7 @@ tidy-and-vendor: ## Cleans up the modules
 	@go mod tidy && go mod vendor
 
 test: ## Run all of the tests
-	@go list . | grep -v vendor/ | xargs -L1 go test -count=1 -v
+	@go list . | grep -v vendor/ | xargs -L1 go test -count=1 ./... -v
 
 test-report: ## Generates a coverage report and opens browser to visualize code coverage
 	@go test -count=1 ./... -coverprofile=coverage.out && go tool cover -html=coverage.out
