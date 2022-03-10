@@ -24,7 +24,7 @@ GET http://localhost<:serverPort>/crypto/sign?message=<val>
 | :--- | :--- |:--- |
 | 200 | `OK` | `{ "Body": string, "Signature": string, "StatusCode": int}` |
 | 202 | `ACCEPTED` | `{ "Body": string, "RequestId": string, "TimeEstimate": float64, "StatusCode": int}` |
-| 503 | `BAD REQUEST` | `javascript { "Body" : string, "StatusCode" : int } `|
+| 503 | `BAD REQUEST` | `{ "Body" : string, "StatusCode" : int } `|
 
 ### Retrieve, if ready, the signature for a given request Id
 #### Endpoint
